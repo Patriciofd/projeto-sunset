@@ -1,0 +1,13 @@
+<tr>
+	<td>[@DESCRICAO]</td>
+	<td> 
+		<button type="button" class="btn btn-info editar"> 
+			<span class="glyphicon glyphicon-edit"></span> 
+		</button> 
+	</td>
+	<td> 
+		<button type="button" class="btn btn-danger remover"> 
+			<span class="glyphicon glyphicon-trash"></span> 
+		</button> 
+	</td>
+</tr>

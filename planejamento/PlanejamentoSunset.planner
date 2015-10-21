@@ -16,18 +16,18 @@
         </overridden-day-type>
       </overridden-day-types>
       <days>
-        <day date="20151025" type="day-type" id="0"/>
+        <day date="20151018" type="day-type" id="0"/>
         <day date="20151016" type="day-type" id="0"/>
         <day date="20151017" type="day-type" id="0"/>
-        <day date="20151018" type="day-type" id="0"/>
-        <day date="20151031" type="day-type" id="0"/>
+        <day date="20151025" type="day-type" id="0"/>
         <day date="20151024" type="day-type" id="0"/>
+        <day date="20151031" type="day-type" id="0"/>
       </days>
     </calendar>
   </calendars>
   <tasks>
     <task id="1" name="Projeto do banco de dados - Tabela de usu&#xE1;rios" note="" work="7200" start="20151016T000000Z" end="20151016T100000Z" work-start="20151016T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
-    <task id="2" name="Implementa&#xE7;&#xE3;o da interface de cadastro de usu&#xE1;rios" note="" work="12600" start="20151020T000000Z" end="20151021T093000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="2" name="Implementa&#xE7;&#xE3;o da interface de cadastro de usu&#xE1;rios" note="" work="14400" start="20151020T000000Z" end="20151020T100000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="1" type="FS"/>
       </predecessors>
@@ -37,11 +37,11 @@
       <task id="4" name="Valida&#xE7;&#xE3;o da data de nascimento de usu&#xE1;rios" note="" work="3600" start="20151020T000000Z" end="20151020T090000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20151020T000000Z"/>
       </task>
-      <task id="5" name="Inser&#xE7;&#xE3;o dos dados no banco de dados" note="" work="5400" start="20151021T000000Z" end="20151021T093000Z" work-start="20151021T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20151021T000000Z"/>
+      <task id="5" name="Inser&#xE7;&#xE3;o dos dados no banco de dados" note="" work="7200" start="20151020T000000Z" end="20151020T100000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20151020T000000Z"/>
       </task>
     </task>
-    <task id="6" name="Implementa&#xE7;&#xE3;o da interface de login" note="" work="5400" start="20151022T093000Z" end="20151022T110000Z" work-start="20151022T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="6" name="Implementa&#xE7;&#xE3;o da interface de login" note="" work="7200" start="20151021T100000Z" end="20151022T090000Z" work-start="20151021T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
       </predecessors>

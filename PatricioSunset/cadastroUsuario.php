@@ -2,61 +2,23 @@
 include ("conecta.php");
 include ("rotina.php");
 
-$cpf = $_POST["cpf_usuario"];
-$dat = $_POST["nascimento_usuario"]
+$NOME = $_POST["nome_usuario"];
+$SENHA = $_POST["senha_usuario"];
+$EMAIL = $_POST["email_usuario"];
+$ENDERECO = $_POST["endereco_usuario"];
+$NUMERO = $_POST["numero_usuario"];
+$CIDADE = $_POST["cidade_usuario"];
+$CEP = $_POST["cep_usuario"];
+$ESTADO = $_POST["estado_usuario"];
+$TELEFONE = $_POST["telefone_usuario"];
+$CELULAR = $_POST["celular_usuario"];
+$CPF = $_POST["cpf_usuario"];
+$DATA = $_POST["nascimento_usuario"];
 
-function ValidaData($dat){
-	$data = explode("/","$dat");
-	$d = $data[0];
-	$m = $data[1];
-	$y = $data[2];
 
-	$res = checkdate($m,$d,$y);
-	if ($res == 1){
-	   return true;
-	} else {
-	   return true;
-	}
+if (validaCPF($CPF)){
+	if(validaData($DATA)){
+		CadastrarUsuario($NOME, $SENHA, $EMAIL, $ENDERECO, $CIDADE, $CEP, $ESTADO, $TELEFONE, $CELULAR, $CPF, $DATA);
+	}	
 }
-
-	function validaCPF($cpf) {
-    	$cpf = ereg_replace('[^0-9]', '', $cpf);
-    	$cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
-
-    	if (strlen($cpf) != 11) {
-        	return false;
-    	}
-
-   	else if ($cpf == '00000000000' || 
-        	$cpf == '11111111111' || 
-        	$cpf == '22222222222' || 
-        	$cpf == '33333333333' || 
-        	$cpf == '44444444444' || 
-        	$cpf == '55555555555' || 
-        	$cpf == '66666666666' || 
-        	$cpf == '77777777777' || 
-        	$cpf == '88888888888' || 
-        	$cpf == '99999999999') {
-        	return false;
-
-     	} else {   
-         
-        	for ($t = 9; $t < 11; $t++) {
-             
-            		for ($d = 0, $c = 0; $c < $t; $c++) {
-                		$d += $cpf{$c} * (($t + 1) - $c);
-          	  }
-            		$d = ((10 * $d) % 11) % 10;
-            		if ($cpf{$c} != $d) {
-                	return false;
-            }
-        }
-	echo "O seu CPF foi validado com sucesso";
-        return true;
-   		 }	
-	}
-}
-
-
-
 ?>

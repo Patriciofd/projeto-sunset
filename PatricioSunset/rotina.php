@@ -58,12 +58,25 @@
 		$sql = "DELETE FROM USUARIO WHERE CODIGO = $codigo";
 		mysql_query($sql);
 			if(mysql_affected_rows() > 0) {
-				echo "Usuário alterado com Sucesso";	
+				echo "Usuario Alterado com Sucesso";	
 			} else {
 				echo "Erro ao Alterar Usuário";	
 			}		
 	}
 	
+	/*-----------------------------------
+	| 			Editar Usuários             |
+	-----------------------------------*/
+	function CompararUsuario($NOME, $SENHA) {
+		if(($NOME) AND ($SENHA)) 
+		{
+			$sql = "SELECT * FROM USUARIO WHERE NOME='$NOME' AND SENHA='$SENHA'";
+			$sql2 = mysql_query($sql) or die("ERRO no comando SQL :".mysql_error());
+			if(mysql_num_rows($sql2) == 1) {
+				header('location: loginUsuario.html');
+			}
+		}
+	}
 	/*-----------------------------------
 	| 			Validar Data               |
 	-----------------------------------*/

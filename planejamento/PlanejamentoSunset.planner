@@ -16,12 +16,12 @@
         </overridden-day-type>
       </overridden-day-types>
       <days>
-        <day date="20151025" type="day-type" id="0"/>
+        <day date="20151018" type="day-type" id="0"/>
         <day date="20151016" type="day-type" id="0"/>
         <day date="20151017" type="day-type" id="0"/>
-        <day date="20151018" type="day-type" id="0"/>
-        <day date="20151031" type="day-type" id="0"/>
+        <day date="20151025" type="day-type" id="0"/>
         <day date="20151024" type="day-type" id="0"/>
+        <day date="20151031" type="day-type" id="0"/>
       </days>
     </calendar>
   </calendars>
@@ -55,7 +55,7 @@
         </predecessors>
       </task>
     </task>
-    <task id="8" name="Implementa&#xE7;&#xE3;o da interface de login" note="" work="5400" start="20151022T110000Z" end="20151023T093000Z" work-start="20151023T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="8" name="Implementa&#xE7;&#xE3;o da interface de login" note="" work="5400" start="20151022T110000Z" end="20151023T093000Z" work-start="20151023T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
       </predecessors>

@@ -28,6 +28,7 @@
 	
 	/*-----------------------------------
 	| 			Editar Usuários             |
+<<<<<<< HEAD
 	-----------------------------------*/
 	function EditarUsuario($codigo, $NOME, $SENHA, $EMAIL, $ENDERECO, $CIDADE, $CEP, $ESTADO, $TELEFONE, $CELULAR, $CPF, $NASCIMENTO) {
 		$sql = "UPDATE USUARIO SET 	
@@ -56,6 +57,23 @@
 	-----------------------------------*/
 	function ExcluirUsuario($codigo) {
 		$sql = "DELETE FROM USUARIO WHERE CODIGO = $codigo";
+=======
+	-----------------------------------*/
+	function EditarUsuario($codigo, $NOME, $SENHA, $EMAIL, $ENDERECO, $CIDADE, $CEP, $ESTADO, $TELEFONE, $CELULAR, $CPF, $NASCIMENTO) {
+		$sql = "UPDATE USUARIO SET 	
+		NOME = '$NOME',
+		SENHA = '$SENHA',
+		EMAIL = '$EMAIL',
+		ENDERECO = '$EMAIL',
+		NUMERO = '$NUMERO',
+		CIDADE = '$CIDADE',
+		CEP = '$CEP',
+		ESTADO = '$ESTADO',
+		TELEFONE = '$TELEFONE',
+		CELULAR = '$CELULAR',
+		CPF = '$CPF',
+		DATA_NASCIMENTO = $NASCIMENTO WHERE CODIGO = ".$codigo."";
+>>>>>>> origin/master
 		mysql_query($sql);
 			if(mysql_affected_rows() > 0) {
 				echo "Usuario Alterado com Sucesso";	
@@ -65,6 +83,22 @@
 	}
 	
 	/*-----------------------------------
+<<<<<<< HEAD
+=======
+	| 			Excluir Usuários           |
+	-----------------------------------*/
+	function ExcluirUsuario($codigo) {
+		$sql = "DELETE FROM USUARIO WHERE CODIGO = $codigo";
+		mysql_query($sql);
+			if(mysql_affected_rows() > 0) {
+				echo "Usuario Alterado com Sucesso";	
+			} else {
+				echo "Erro ao Alterar Usuário";	
+			}		
+	}
+	
+	/*-----------------------------------
+>>>>>>> origin/master
 	| 			Editar Usuários             |
 	-----------------------------------*/
 	function CompararUsuario($NOME, $SENHA) {
@@ -75,6 +109,7 @@
 			if(mysql_num_rows($sql2) == 1) {
 				header('location: loginUsuario.html');
 			}
+<<<<<<< HEAD
 		}
 	}
 	
@@ -102,6 +137,10 @@
 	
 	
 	
+=======
+		}
+	}
+>>>>>>> origin/master
 	/*-----------------------------------
 	| 			Validar Data               |
 	-----------------------------------*/

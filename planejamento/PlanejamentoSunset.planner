@@ -60,10 +60,17 @@
         <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
       </predecessors>
     </task>
+<<<<<<< HEAD
     <task id="9" name="Projeto do banco de dados - Tabela de produtos" note="" work="7200" start="20151028T000000Z" end="20151028T100000Z" work-start="20151028T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20151028T000000Z"/>
     </task>
     <task id="10" name="Implementa&#xE7;&#xE3;o da interface de cadastro de produtos" note="" work="21600" start="20151028T100000Z" end="20151030T100000Z" work-start="20151028T100000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+=======
+    <task id="9" name="Projeto do banco de dados - Tabela de produtos" note="" work="7200" start="20151028T000000Z" end="20151028T100000Z" work-start="20151028T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20151028T000000Z"/>
+    </task>
+    <task id="10" name="Implementa&#xE7;&#xE3;o da interface de cadastro de produtos" note="" work="21600" start="20151028T100000Z" end="20151030T100000Z" work-start="20151028T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+>>>>>>> origin/master
       <predecessors>
         <predecessor id="1" predecessor-id="9" type="FS"/>
       </predecessors>

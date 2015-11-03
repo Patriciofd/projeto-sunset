@@ -82,7 +82,7 @@
 /*-----------------------------------
 	| 			Cadastrar Produtos         |
 	-----------------------------------*/
-	function CadastrarProdutos($NOME, $MARCA, $UNIDADES, $PRECO, $TIPO, $QUANTIDADE) {
+	function CadastrarUsuario($NOME, $MARCA, $UNIDADES, $PRECO, $TIPO, $QUANTIDADE) {
 		$sql = "INSERT INTO PRODUTOS (	
 		NOME,
 		MARCA,

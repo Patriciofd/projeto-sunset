@@ -16,77 +16,91 @@
         </overridden-day-type>
       </overridden-day-types>
       <days>
-        <day date="20151018" type="day-type" id="0"/>
+        <day date="20151025" type="day-type" id="0"/>
         <day date="20151016" type="day-type" id="0"/>
         <day date="20151017" type="day-type" id="0"/>
-        <day date="20151025" type="day-type" id="0"/>
-        <day date="20151024" type="day-type" id="0"/>
+        <day date="20151018" type="day-type" id="0"/>
         <day date="20151031" type="day-type" id="0"/>
+        <day date="20151024" type="day-type" id="0"/>
       </days>
     </calendar>
   </calendars>
   <tasks>
     <task id="1" name="Projeto do banco de dados - Tabela de usu&#xE1;rios" note="" work="7200" start="20151016T000000Z" end="20151016T100000Z" work-start="20151016T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
-    <task id="2" name="Implementa&#xE7;&#xE3;o da interface de cadastro de usu&#xE1;rios" note="" work="14400" start="20151020T000000Z" end="20151020T100000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="2" name="Implementa&#xE7;&#xE3;o da interface de cadastro de usu&#xE1;rios" note="" work="21600" start="20151020T000000Z" end="20151021T110000Z" work-start="20151020T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="1" type="FS"/>
       </predecessors>
-      <task id="3" name="Valida&#xE7;&#xE3;o do CPF de usu&#xE1;rios" note="" work="3600" start="20151020T000000Z" end="20151020T090000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="3" name="Valida&#xE7;&#xE3;o do CPF de usu&#xE1;rios" note="" work="3600" start="20151020T000000Z" end="20151020T090000Z" work-start="20151020T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20151020T000000Z"/>
       </task>
-      <task id="4" name="Valida&#xE7;&#xE3;o da data de nascimento de usu&#xE1;rios" note="" work="3600" start="20151020T000000Z" end="20151020T090000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20151020T000000Z"/>
+      <task id="4" name="Valida&#xE7;&#xE3;o da data de nascimento " note="" work="3600" start="20151020T090000Z" end="20151020T100000Z" work-start="20151020T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="3" type="FS"/>
+        </predecessors>
       </task>
-      <task id="5" name="Inser&#xE7;&#xE3;o dos dados no banco de dados" note="" work="7200" start="20151020T000000Z" end="20151020T100000Z" work-start="20151020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20151020T000000Z"/>
+      <task id="5" name="Valida&#xE7;&#xE3;o do campo de email" note="" work="1800" start="20151020T100000Z" end="20151020T103000Z" work-start="20151020T100000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="4" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="6" name="Valida&#xE7;&#xE3;o do campo CEP" note="" work="1800" start="20151020T103000Z" end="20151020T110000Z" work-start="20151020T103000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="5" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="7" name="Inser&#xE7;&#xE3;o ao banco de dados" note="" work="10800" start="20151020T110000Z" end="20151021T110000Z" work-start="20151021T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="6" type="FS"/>
+        </predecessors>
       </task>
     </task>
-    <task id="6" name="Implementa&#xE7;&#xE3;o da interface de login" note="" work="7200" start="20151021T100000Z" end="20151022T090000Z" work-start="20151021T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="8" name="Implementa&#xE7;&#xE3;o da interface de login" note="" work="5400" start="20151022T110000Z" end="20151023T093000Z" work-start="20151023T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
       </predecessors>
     </task>
-    <task id="7" name="Projeto do banco de dados - Tabela de produtos" note="" work="7200" start="20151028T000000Z" end="20151028T100000Z" work-start="20151028T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="9" name="Projeto do banco de dados - Tabela de produtos" note="" work="7200" start="20151028T000000Z" end="20151028T100000Z" work-start="20151028T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20151028T000000Z"/>
     </task>
-    <task id="8" name="Implementa&#xE7;&#xE3;o da interface de cadastro de produtos" note="" work="21600" start="20151028T100000Z" end="20151030T100000Z" work-start="20151028T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <predecessors>
-        <predecessor id="1" predecessor-id="7" type="FS"/>
-      </predecessors>
-    </task>
-    <task id="9" name="Implementa&#xE7;&#xE3;o da interface de visualiza&#xE7;&#xE3;o de produtos" note="" work="21600" start="20151030T100000Z" end="20151102T100000Z" work-start="20151030T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <predecessors>
-        <predecessor id="1" predecessor-id="8" type="FS"/>
-      </predecessors>
-    </task>
-    <task id="10" name="Implementa&#xE7;&#xE3;o da interface de edi&#xE7;&#xE3;o de produtos" note="" work="28800" start="20151102T100000Z" end="20151105T090000Z" work-start="20151102T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="10" name="Implementa&#xE7;&#xE3;o da interface de cadastro de produtos" note="" work="21600" start="20151028T100000Z" end="20151030T100000Z" work-start="20151028T100000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="9" type="FS"/>
       </predecessors>
     </task>
-    <task id="11" name="Projeto do banco de dados - Tabela de carrinho de compras" note="" work="9000" start="20151111T000000Z" end="20151111T103000Z" work-start="20151111T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20151111T000000Z"/>
+    <task id="11" name="Implementa&#xE7;&#xE3;o da interface de visualiza&#xE7;&#xE3;o de produtos" note="" work="21600" start="20151030T100000Z" end="20151102T100000Z" work-start="20151030T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="10" type="FS"/>
+      </predecessors>
     </task>
-    <task id="12" name="Implementa&#xE7;&#xE3;o da funcionalidade - Adicionar ao carrinho de compras" note="" work="18000" start="20151111T103000Z" end="20151113T093000Z" work-start="20151111T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="12" name="Implementa&#xE7;&#xE3;o da interface de edi&#xE7;&#xE3;o de produtos" note="" work="28800" start="20151102T100000Z" end="20151105T090000Z" work-start="20151102T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="11" type="FS"/>
       </predecessors>
     </task>
-    <task id="13" name="Implementa&#xE7;&#xE3;o da interface de visualiza&#xE7;&#xE3;o do carrinho de compras" note="" work="10800" start="20151113T093000Z" end="20151116T093000Z" work-start="20151113T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <predecessors>
-        <predecessor id="1" predecessor-id="12" type="FS"/>
-      </predecessors>
+    <task id="13" name="Projeto do banco de dados - Tabela de carrinho de compras" note="" work="9000" start="20151111T000000Z" end="20151111T103000Z" work-start="20151111T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20151111T000000Z"/>
     </task>
-    <task id="14" name="Implementa&#xE7;&#xE3;o da funcionalidade - Edi&#xE7;&#xE3;o do carrinho de compras" note="" work="25200" start="20151116T093000Z" end="20151117T100000Z" work-start="20151116T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="14" name="Implementa&#xE7;&#xE3;o da funcionalidade - Adicionar ao carrinho de compras" note="" work="18000" start="20151111T103000Z" end="20151113T093000Z" work-start="20151111T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="13" type="FS"/>
       </predecessors>
-      <task id="15" name="Implementa&#xE7;&#xE3;o da funcionalidade - Remover produto do carrinho de compras" note="" work="12600" start="20151116T093000Z" end="20151117T100000Z" work-start="20151116T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="16" name="Implementa&#xE7;&#xE3;o da funcionalidade - Editar quantidade do produto no carrinho de compras" note="" work="12600" start="20151116T093000Z" end="20151117T100000Z" work-start="20151116T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="17" name="Implementa&#xE7;&#xE3;o da interface de finaliza&#xE7;&#xE3;o de compra" note="" work="28800" start="20151117T100000Z" end="20151120T090000Z" work-start="20151117T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="15" name="Implementa&#xE7;&#xE3;o da interface de visualiza&#xE7;&#xE3;o do carrinho de compras" note="" work="10800" start="20151113T093000Z" end="20151116T093000Z" work-start="20151113T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="14" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="16" name="Implementa&#xE7;&#xE3;o da funcionalidade - Edi&#xE7;&#xE3;o do carrinho de compras" note="" work="25200" start="20151116T093000Z" end="20151117T100000Z" work-start="20151116T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="15" type="FS"/>
+      </predecessors>
+      <task id="17" name="Implementa&#xE7;&#xE3;o da funcionalidade - Remover produto do carrinho de compras" note="" work="12600" start="20151116T093000Z" end="20151117T100000Z" work-start="20151116T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="18" name="Implementa&#xE7;&#xE3;o da funcionalidade - Editar quantidade do produto no carrinho de compras" note="" work="12600" start="20151116T093000Z" end="20151117T100000Z" work-start="20151116T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="19" name="Implementa&#xE7;&#xE3;o da interface de finaliza&#xE7;&#xE3;o de compra" note="" work="28800" start="20151117T100000Z" end="20151120T090000Z" work-start="20151117T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="16" type="FS"/>
       </predecessors>
     </task>
   </tasks>

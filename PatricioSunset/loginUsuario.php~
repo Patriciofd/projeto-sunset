@@ -5,8 +5,7 @@ include("rotina.php");
 $NOME = $_POST['login_usuario'];
 $SENHA = $_POST['senha_usuario'];
 
-if(ComparaUsuario($NOME, $SENHA)){
+if(CompararUsuario($NOME, $SENHA)){
 echo "Login feito com sucesso";
-
 }
 ?>

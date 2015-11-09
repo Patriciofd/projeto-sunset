@@ -1,5 +1,4 @@
 <?php
-	
 	/*-----------------------------------
 	| 			Cadastrar Usuários         |
 	-----------------------------------*/
@@ -27,64 +26,6 @@
 	}
 	
 	/*-----------------------------------
-	| 			Editar Usuários             |
-<<<<<<< HEAD
-	-----------------------------------*/
-	function EditarUsuario($codigo, $NOME, $SENHA, $EMAIL, $ENDERECO, $CIDADE, $CEP, $ESTADO, $TELEFONE, $CELULAR, $CPF, $NASCIMENTO) {
-		$sql = "UPDATE USUARIO SET 	
-		NOME = '$NOME',
-		SENHA = '$SENHA',
-		EMAIL = '$EMAIL',
-		ENDERECO = '$EMAIL',
-		NUMERO = '$NUMERO',
-		CIDADE = '$CIDADE',
-		CEP = '$CEP',
-		ESTADO = '$ESTADO',
-		TELEFONE = '$TELEFONE',
-		CELULAR = '$CELULAR',
-		CPF = '$CPF',
-		DATA_NASCIMENTO = $NASCIMENTO WHERE CODIGO = ".$codigo."";
-		mysql_query($sql);
-			if(mysql_affected_rows() > 0) {
-				echo "Usuario Alterado com Sucesso";	
-			} else {
-				echo "Erro ao Alterar Usuário";	
-			}		
-	}
-	
-	/*-----------------------------------
-	| 			Excluir Usuários           |
-	-----------------------------------*/
-	function ExcluirUsuario($codigo) {
-		$sql = "DELETE FROM USUARIO WHERE CODIGO = $codigo";
-=======
-	-----------------------------------*/
-	function EditarUsuario($codigo, $NOME, $SENHA, $EMAIL, $ENDERECO, $CIDADE, $CEP, $ESTADO, $TELEFONE, $CELULAR, $CPF, $NASCIMENTO) {
-		$sql = "UPDATE USUARIO SET 	
-		NOME = '$NOME',
-		SENHA = '$SENHA',
-		EMAIL = '$EMAIL',
-		ENDERECO = '$EMAIL',
-		NUMERO = '$NUMERO',
-		CIDADE = '$CIDADE',
-		CEP = '$CEP',
-		ESTADO = '$ESTADO',
-		TELEFONE = '$TELEFONE',
-		CELULAR = '$CELULAR',
-		CPF = '$CPF',
-		DATA_NASCIMENTO = $NASCIMENTO WHERE CODIGO = ".$codigo."";
->>>>>>> origin/master
-		mysql_query($sql);
-			if(mysql_affected_rows() > 0) {
-				echo "Usuario Alterado com Sucesso";	
-			} else {
-				echo "Erro ao Alterar Usuário";	
-			}		
-	}
-	
-	/*-----------------------------------
-<<<<<<< HEAD
-=======
 	| 			Excluir Usuários           |
 	-----------------------------------*/
 	function ExcluirUsuario($codigo) {
@@ -98,7 +39,6 @@
 	}
 	
 	/*-----------------------------------
->>>>>>> origin/master
 	| 			Editar Usuários             |
 	-----------------------------------*/
 	function CompararUsuario($NOME, $SENHA) {
@@ -109,7 +49,6 @@
 			if(mysql_num_rows($sql2) == 1) {
 				header('location: loginUsuario.html');
 			}
-<<<<<<< HEAD
 		}
 	}
 	
@@ -125,22 +64,35 @@
 		PRECO,
 		TIPO,
 		QUANTIDADE
-		) VALUES ('$NOME','$MARCA', '$UNIDADES', $PRECO,'$TIPO', QUANTIDADE-+-+)";
+		) VALUES ('$NOME','$MARCA', '$UNIDADES', $PRECO,'$TIPO', QUANTIDADE)";
 		mysql_query($sql) or die (mysql_error());
 		if(mysql_affected_rows() > 0) {
-			echo "Usuário Cadastrado com Sucesso";	
+			echo "Produto Cadastrado com Sucesso";	
 		} else {
-			echo "Erro ao Cadastrar Usuário";	
+			echo "Erro ao Cadastrar Produto";
 		}
 	}	
 	
+	/*-----------------------------------
+	| 			Consultar Produtos         |
+	-----------------------------------*/
+	function ConsultarProdutos(){
+		$sql = "SELECT * FROM PRODUTOS";
+		$result = mysql_query($sql);
+		$i = 0;
+		while ($row = mysql_fetch_assoc($result)) {
+			$i++;
+			echo "<h3><p>Produto ".$i."</p></h3><br>";
+    		echo "Nome: ".$row["NOME"]."<br>";
+    		echo "Marca: ".$row["MARCA"]."<br>";
+    		echo "Unidades: ".$row["UNIDADES"]."<br>";
+			echo "Preço: ".$row["PRECO"]."<br>";
+		   echo "Tipo: ".$row["TIPO"]."<br>";
+			echo "Quantidade: ".$row["QUANTIDADE"]."<br><br>";
+}
+}
 	
 	
-	
-=======
-		}
-	}
->>>>>>> origin/master
 	/*-----------------------------------
 	| 			Validar Data               |
 	-----------------------------------*/

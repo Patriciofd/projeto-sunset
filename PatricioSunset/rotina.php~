@@ -1,5 +1,4 @@
 <?php
-	
 	/*-----------------------------------
 	| 			Cadastrar Usuários         |
 	-----------------------------------*/
@@ -27,49 +26,19 @@
 	}
 	
 	/*-----------------------------------
-	| 			Editar Usuários             |
-	-----------------------------------*/
-	function EditarUsuario($codigo, $NOME, $SENHA, $EMAIL, $ENDERECO, $CIDADE, $CEP, $ESTADO, $TELEFONE, $CELULAR, $CPF, $NASCIMENTO) {
-		$sql = "UPDATE USUARIO SET 	
-		NOME = '$NOME',
-		SENHA = '$SENHA',
-		EMAIL = '$EMAIL',
-		ENDERECO = '$EMAIL',
-		NUMERO = '$NUMERO',
-		CIDADE = '$CIDADE',
-		CEP = '$CEP',
-		ESTADO = '$ESTADO',
-		TELEFONE = '$TELEFONE',
-		CELULAR = '$CELULAR',
-		CPF = '$CPF',
-		DATA_NASCIMENTO = $NASCIMENTO WHERE CODIGO = ".$codigo."";
-		mysql_query($sql);
-			if(mysql_affected_rows() > 0) {
-				echo "Usuario Alterado com Sucesso";	
-			} else {
-				echo "Erro ao Alterar Usuário";	
-			}		
-	}
-	
-	/*-----------------------------------
 	| 			Excluir Usuários           |
 	-----------------------------------*/
 	function ExcluirUsuario($codigo) {
 		$sql = "DELETE FROM USUARIO WHERE CODIGO = $codigo";
 		mysql_query($sql);
 			if(mysql_affected_rows() > 0) {
-<<<<<<< HEAD
 				echo "Usuario Alterado com Sucesso";	
-=======
-				echo "Usuário alterado com Sucesso";	
->>>>>>> origin/master
 			} else {
 				echo "Erro ao Alterar Usuário";	
 			}		
 	}
 	
 	/*-----------------------------------
-<<<<<<< HEAD
 	| 			Editar Usuários             |
 	-----------------------------------*/
 	function CompararUsuario($NOME, $SENHA) {
@@ -87,7 +56,7 @@
 /*-----------------------------------
 	| 			Cadastrar Produtos         |
 	-----------------------------------*/
-	function CadastrarUsuario($NOME, $MARCA, $UNIDADES, $PRECO, $TIPO, $QUANTIDADE) {
+	function CadastrarProdutos($NOME, $MARCA, $UNIDADES, $PRECO, $TIPO, $QUANTIDADE) {
 		$sql = "INSERT INTO PRODUTOS (	
 		NOME,
 		MARCA,
@@ -95,21 +64,36 @@
 		PRECO,
 		TIPO,
 		QUANTIDADE
-		) VALUES ('$NOME','$MARCA', '$UNIDADES', $PRECO,'$TIPO', QUANTIDADE-+-+)";
+		) VALUES ('$NOME','$MARCA', '$UNIDADES', $PRECO,'$TIPO', QUANTIDADE)";
 		mysql_query($sql) or die (mysql_error());
 		if(mysql_affected_rows() > 0) {
-			echo "Usuário Cadastrado com Sucesso";	
+			echo "Produto Cadastrado com Sucesso";	
 		} else {
-			echo "Erro ao Cadastrar Usuário";	
+			echo "Erro ao Cadastrar Produto";
 		}
 	}	
 	
-	
+	/*-----------------------------------
+	| 			Consultar Produtos         |
+	-----------------------------------*/
+	function ConsultarProdutos(){
+		$sql = "SELECT * FROM PRODUTOS";
+		$result = mysql_query($sql);
+		$i = 0;
+		while ($row = mysql_fetch_assoc($result)) {
+			$i++;
+			echo "<h3><p>Produto ".$i."</p></h3><br>";
+    		echo "Nome:".$row["NOME"]."<br>";
+    		echo "Marca:".$row["MARCA"]."<br>";
+    		echo "Unidades:".$row["UNIDADES"]."<br>";
+			echo "Preço:".$row["PRECO"]."<br>";
+		   echo "Tipo:".$row["TIPO"]."<br>";
+			echo "Quantidade:".$row["QUANTIDADE"]."<br>";
+}
+}
 	
 	
 	/*-----------------------------------
-=======
->>>>>>> origin/master
 	| 			Validar Data               |
 	-----------------------------------*/
 	function validaData($dat){
@@ -122,12 +106,8 @@
 	if ($res == 1){
 	   return true;
 	} else {
-<<<<<<< HEAD
 		$erro = "Data de nascimento inválida, insira-a novamente";
 	   return $erro;
-=======
-	   return false;
->>>>>>> origin/master
 	}
 }
 
@@ -179,8 +159,4 @@
 		}
 	}
 
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> origin/master

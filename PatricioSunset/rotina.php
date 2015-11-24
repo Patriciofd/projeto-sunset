@@ -87,14 +87,34 @@
     		echo "Marca: ".$row["MARCA"]."<br>";
     		echo "Unidades: ".$row["UNIDADES"]."<br>";
 			echo "Preço: ".$row["PRECO"]."<br>";
-		   echo "Tipo: ".$row["TIPO"]."<br>";
+		    echo "Tipo: ".$row["TIPO"]."<br>";
 			echo "Quantidade: ".$row["QUANTIDADE"]."<br><br>";
 }
 }
 	
+	/*-----------------------------------
+	| 			Consultar Carrinho       |
+	-----------------------------------*/
+	function ConsultarCarrinho($CODIGO){
+		$sql = "SELECT * FROM CARRINHO WHERE USUARIO = $CODIGO";
+		$result = mysql_query($sql);
+		$i = 0;
+		$soma = 0;
+		while ($row = mysql_fetch_assoc($result)) {
+			$i++;
+			echo "<table border=2><tr>";
+    		echo "<td>Produto: ".$row["PRODUTO"]."</td>";
+    		echo "<td>Preco: ".$row["PRECO"]."</td>";
+			echo "<td>Quantidade: ".$row["QUANTIDADE"]."</td></tr>";
+		    $soma += $row["PRECO"] * $row["QUANTIDADE"];
+}
+		$sql = "UPDATE CARRINHO SET PRECO_TOTAL = (".$soma.") WHERE ID = ".$CODIGO;
+		
+		echo "<tr><td></td><td></td><td>Preco Total: ".$soma."</td></tr></table>";
+}
 	
 	/*-----------------------------------
-	| 			Validar Data               |
+	| 			Validar Data             |
 	-----------------------------------*/
 	function validaData($dat){
 	$data = explode("/","$dat");
